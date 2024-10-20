@@ -1,0 +1,1644 @@
+*{
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0px;  
+}
+
+body{
+    background-color: rgb(9, 38, 93);
+} 
+
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 25px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: gray;
+} 
+
+
+
+
+
+
+/* ---------------------- NAVIGATION BAR  --------------------*/
+
+
+.header{
+    z-index: 10; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+    color: aliceblue;
+    background-color: black;
+    padding: 20px;
+    border: 1px solid black;
+    width: 100vw;
+    position: fixed;   
+} 
+
+.homeitem1{
+    margin: auto;
+}
+
+.h1{
+    color:red ;
+}
+
+.homeitem2{
+    margin: auto;
+}
+
+.navitem:hover{
+    color: blue;
+    font-size: larger;
+}
+
+
+.navitem:active{
+    color: aliceblue;
+    font-size: larger;
+}
+
+a{
+    text-decoration: none;
+    padding: 15px;
+    color: aliceblue;
+}
+
+
+                /* DROPDOWN MENU */
+
+                .specialdropdown{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                
+
+                .dropdown{
+                    display: inline-block;
+                } 
+                .dropdown button{
+                    background-color: hsla(246, 59%, 49%, 0);
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    font-style: oblique;
+                    font-weight:800;
+                    font-size: large;
+                    margin: 2px;
+                }
+                .dropdown a{
+                    display: block;
+                    color: black;
+                    text-decoration: none;
+                    padding: 10px 15px;
+                }
+                .dropdown .content{
+                    display: none;
+                    position: absolute;
+                    background-color: hsl(236, 53%, 40%);
+                    min-width: 100px;
+                    font-style: oblique;
+                    box-shadow: 2px 2px 5px hsla(0, 0%, 100%, 0.8);
+                }
+                .dropdown:hover .content{
+                    display: block;
+                }
+                .dropdown:hover button{
+                    background-color: hsl(0, 0%, 10%);
+                }
+                .dropdown a:hover{
+                    background-color: hsl(244, 44%, 49%);
+                    color: white;
+                    transition-duration: 0.5s;
+                }
+
+
+/*----------------- TOGGLE MODE --------------------*/
+
+
+.toggle{
+
+    width: 80px;
+    border: 3px solid white;
+    border-radius: 10px;
+
+}
+
+.toggleitem{
+    padding: 15px;
+    border-radius: 20px;
+    animation: tog;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes tog{
+    from{
+        top: 0px;
+        left: 0px;
+        width: 30px;
+        color: white;
+        background-color: white;
+    }
+
+    to{
+        top:0px;
+        color: blue;
+        width: 75px; 
+        background-color: blue;
+    }
+}
+
+
+
+
+
+
+/*            SAMSUNG GALAXY S8 - Mobile View                */
+
+@media  (width>0px) and (width<361px){
+    
+
+    .homeitem1{
+        text-align: center;
+        font-size: 10px; 
+    }
+
+    .specialdropdown{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    } 
+
+
+    .header .homeitem2{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .header img{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .header .toggle{
+        visibility: hidden;
+        position: absolute;
+    } 
+ 
+    
+
+} 
+
+
+
+/*        REDMI NOTE 12 PRO, POCO, REAL ME, MOTO G POWER    */
+
+@media (width>362px) and (width<650px){
+    
+    .homeitem1{
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .specialdropdown{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    } 
+
+
+    .header .homeitem2{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .header img{
+        visibility: hidden;
+        position: absolute;
+    } 
+
+    .header .toggle{
+        visibility: hidden;
+        position: absolute;
+    } 
+    
+
+} 
+
+
+
+/*              IPAD MINI - View               */
+
+@media (width=768px){
+    
+
+
+
+    /* .homeitem1{
+        text-align: center;
+        font-size: 14px;
+    } 
+
+    .header .specialdropdown{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }  */
+
+
+    .header .homeitem2{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    /* .header img{
+        visibility: hidden;
+        position: absolute;
+    } 
+
+    .header .toggle{
+        visibility: hidden;
+        position: absolute;
+    } */
+    
+
+    
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------HOME---------------------------------*/
+
+
+
+
+
+.contain{
+    border: 0px solid white;   
+    overflow: auto;
+    padding: 50px;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(9, 38, 93);
+}
+
+.itemc1{
+    padding: 25px;
+    margin: 15px;
+    color:aliceblue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-top: 150px;
+}
+
+
+.intro{
+    padding: 15px;
+    font-weight: 1000;
+    font-size: larger;
+}
+
+
+img{
+    width: 250px;
+    border-radius: 20px;
+}
+
+
+.kiranimage{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    animation-name: kiran;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
+    /* animation-direction: alternate; */
+    /* animation-fill-mode: forwards; */
+    margin-top: 100px; 
+}
+
+@keyframes kiran{
+    0%{
+        top: 0px;
+        left: 0px;
+    } 
+
+    25%{
+        top: 0px;
+        left: 50px;
+        
+    }
+
+    50%{
+        top: 50px; 
+        left: 50px;
+        
+    }
+
+    75%{
+        left: 0px;
+        top: 50px;
+        
+    } 
+
+    100%{
+        top: 0px;
+        right: 50px;
+        
+    }
+}
+
+
+
+.logo{
+    position: relative;
+    animation: logo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes logo{
+    from{
+        background-color: rgba(211, 190, 167, 0.885);
+        border-radius: 10px;
+    }
+
+    to{
+        top: 0px;
+        right: 0px;
+    }
+}   
+ 
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+} 
+
+
+h2{
+    text-align: center;
+    margin-bottom: 35px;
+    border: 3px solid black;
+    padding: 20px;
+    background-color:rgba(27, 27, 222, 0.455);
+    color: aliceblue;
+    font-size: 35px;
+    width: 175px;
+    box-shadow:  5px 5px 5px aliceblue;
+    border-radius: 20px;
+    transition-duration: 1s;
+}
+
+
+#cv{
+    border: 3px solid black;
+    text-align: center;
+    width: 150px;
+    background-color: gray;
+    border-radius: 20px;
+    font-size: large;
+    box-shadow: 5px 3px 3px rgb(214, 218, 224);
+    margin: auto;
+    animation: logo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cv:hover{
+    color: black;
+    font-size: larger;
+}
+
+#cv:active{
+    color: aliceblue;
+}
+
+.logoitem:hover{
+    animation: none;
+}  
+
+
+
+
+
+/*             SAMSUNG GALAXY S8 - Mobile View           */
+
+/* @media (width>0px) and (width<361px){
+    Not Required    
+
+} */
+
+
+
+
+/*        REDMI NOTE 12 PRO, POCO, REAL ME, MOTO G POWER    */
+
+@media (width>362px) and (width<650px){
+    
+    .detail{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 180px; 
+    }
+    
+
+} 
+
+
+
+
+
+/*             IPAD MINI - View           */
+
+
+@media (width=768px){
+    
+    
+
+    .detail{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .kiranimage{
+        position: relative;
+        animation: kiran;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    
+    
+    @keyframes kiran{
+        from{
+            top: 0px;
+            left: 0px;
+            translate: 28px;
+            border-radius: 25px;
+        }
+    
+        to{
+            top: 0px;
+            right: 0px;
+    
+        }
+    }
+
+
+}
+
+
+
+
+
+
+/*-------------------ABOUT-------------------------------------*/
+
+
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+} 
+
+
+h2{
+    text-align: center;
+    margin-bottom: 35px;
+    border: 3px solid black;
+    padding: 20px;
+    background-color:rgb(12, 12, 112);
+    color: aliceblue;
+    font-size: 35px;
+    width: 275px;
+    box-shadow:  5px 5px 5px rgb(202, 204, 206);
+    border-radius: 20px;
+    transition-duration: 1s;
+    margin-top: 160px;
+}
+
+h2:hover{
+    transform: scale(1.03);
+    box-shadow: 6px 6px 3px aliceblue;
+}
+
+
+
+
+/*   ------------------------- Paragraph -------------------- */
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.classcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.profileimagecontainer{
+    margin: auto;
+}
+
+.paracontainer{
+    border: 0.1px solid rgb(32, 26, 26);;
+    padding: 25px;
+    margin-right:20px;
+    background-color: rgb(104, 91, 91);
+    color: white;
+    border-radius: 25px;
+    width: 800px;
+    box-shadow: 5px 5px 3px aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+    margin: auto;
+    
+}
+
+.item{
+    padding: 15px;
+    transition-duration: 1s;
+}
+
+
+.paracontainer:hover{
+    transform: scale(1.01);
+}
+
+.item:hover{
+    transform: scaleX(1.02);
+    background-color:rgba(17, 11, 11, 0.49);
+    border-radius: 20px;
+}
+
+
+
+
+/*      SAMSUNG GALAXY S8 - Mobile View      */
+
+@media (width>0px) and (width<361px){
+    
+    
+
+    .paracontainer{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+
+/*        REDMI NOTE 12 PRO, POCO, REAL ME, MOTO G POWER     */
+
+@media (width>362px) and (width<650px){
+
+
+
+
+    .paracontainer{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: auto;
+    } 
+
+}
+
+
+
+
+/*             IPAD MINI - View           */
+
+@media (width=768px){
+    
+    
+
+    .paracontainer{
+        width: 700px;
+    }
+
+    
+}
+
+
+
+
+
+
+/*--------------------SKILLS------------------------------------*/
+
+
+
+.skillheading{
+    animation: skillheading;
+    animation-duration: 1s;
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes skillheading{
+    from{
+        top: 0px;
+        box-shadow: 5px 5px black;
+        color: aqua;
+    }
+}
+
+.total_skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 35px;
+}
+
+
+.skills{
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 35px;
+    width: 650px;
+    background-color: rgb(17, 15, 15); 
+    border-radius: 25px;
+}
+
+
+.skillitem{
+    padding: 10px;
+    background-color: rgb(17, 15, 15);
+    color: aliceblue;
+    border-radius: 5px;
+    margin: 7px;
+}
+
+.skillitem2{
+    text-align: center;
+    background-color: rgba(0, 0, 255, 0.492); 
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.skill1{
+    width: 500px;
+    animation: skill1;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+@keyframes skill1{
+    from{
+        top: 0px;
+        left: 0px;
+        width: 50px;
+    }
+
+    to{
+        top:0px;
+        width: 450px;
+    }
+}
+
+
+
+
+.skill2{
+    width: 400px;
+    animation: skill2;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+@keyframes skill2{
+    from{
+        top: 0px;
+        left: 0px;
+        width: 50px;
+    }
+
+    to{
+        top:0px;
+        width: 400px;
+    }
+}
+
+
+.skill3{
+    width: 550px;
+    animation: skill3;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+
+@keyframes skill3{
+    from{
+        top: 0px;
+        left: 0px;
+        width: 50px;
+    }
+
+    to{
+        top:0px;
+        width: 550px;
+    }
+}
+
+
+.skill4{
+    width: 500px;
+    animation: skill4;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+@keyframes skill4{
+    from{
+        top: 0px;
+        left: 0px;
+        width: 50px;
+    }
+
+    to{
+        top:0px;
+        width: 500px;
+    }
+}
+
+
+.skill5{
+    width: 450px;
+    animation: skill5;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+@keyframes skill5{
+    from{
+        top: 0px;
+        left: 0px;
+        width: 50px;
+    }
+
+    to{
+        top:0px;
+        width: 420px;
+    }
+}
+
+
+.skill6{
+    width: 500px;
+    animation: skill6;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-timing-function: ease-out;
+}
+
+@keyframes skill6{
+    from{
+        top: 0px;
+        left: 0px;
+        width: 50px;
+    }
+
+    to{
+        top:0px;
+        width: 500px;
+    }
+}
+
+
+
+
+
+
+.personality{
+    border: 3px solid black;
+    background-color: rgb(17, 15, 15);
+    margin-right: 35px;
+    border-radius: 20px;
+    padding: 25px;
+    width: 300px;
+}
+
+.personalityskills{
+    color: aliceblue;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: start;
+}
+
+.per2{
+    border-radius: 100px;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    background-color: rgba(0, 0, 255, 0.492);
+}
+
+.pe1{
+    animation: pe1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes pe1{
+    from{
+        top: 0px;
+        width: 50px;
+    }
+    to{
+        top: 0px;
+        width: 190px;
+    }
+}
+
+.pe2{
+    animation: pe2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes pe2{
+    from{
+        top: 0px;
+        width: 50px;
+    }
+    to{
+        top: 0px;
+        width: 170px;
+    }
+}
+
+
+.pe3{
+    animation: pe3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes pe3{
+    from{
+        top: 0px;
+        width: 50px;
+    }
+    to{
+        top: 0px;
+        width: 220px;
+    }
+}
+
+
+.pe4{
+    animation: pe4;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    position: relative;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes pe4{
+    from{
+        top: 0px;
+        width: 50px;
+    }
+    to{
+        top: 0px;
+        width: 220px;
+    }
+}
+
+
+
+
+
+/*          SAMSUNG GALAXY S8 - Mobile View       */
+
+@media (width>0px) and (width<361px){
+    
+
+    .skills{
+        width: 320px;
+        margin: auto;
+    }
+
+    
+    @keyframes skill1{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 190px;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    @keyframes skill2{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 170px;
+        }
+    }
+    
+    
+    
+    
+    
+    @keyframes skill3{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 250px;
+        }
+    }
+    
+    
+    
+    
+    @keyframes skill4{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 230px;
+        }
+    }
+    
+    
+    
+    
+    @keyframes skill5{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 180px;
+        }
+    }
+    
+    
+    
+    
+    @keyframes skill6{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 230px;
+        }
+    }
+
+
+    .personality{
+        width: 300px;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+}
+
+
+
+/*        REDMI NOTE 12 PRO, POCO, REAL ME, MOTO G POWER    */
+
+@media (width>362px) and (width<650px){
+
+
+    .skills{
+        width: 320px;
+        margin: auto;
+    }
+
+    
+    @keyframes skill1{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 190px;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    @keyframes skill2{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 170px;
+        }
+    }
+    
+    
+    
+    
+    
+    @keyframes skill3{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 250px;
+        }
+    }
+    
+    
+    
+    
+    @keyframes skill4{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 230px;
+        }
+    }
+    
+    
+    
+    
+    @keyframes skill5{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 180px;
+        }
+    }
+    
+    
+    
+    
+    @keyframes skill6{
+        from{
+            top: 0px;
+            left: 0px;
+            width: 20px;
+        }
+    
+        to{
+            top:0px;
+            width: 230px;
+        }
+    }
+
+
+    .personality{
+        width: 300px;
+        margin: auto;
+        margin-top: 25px;
+    }
+
+}
+
+
+
+/*             IPAD MINI - View           */
+
+@media (width=768px){
+
+    .skills{
+        margin: auto;
+    }
+
+    .personality{
+        margin: auto;
+        margin-top: 25px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* -------------- CERTIFiCATIONS -------------------- */
+
+
+
+
+.certi_heading{
+    animation: certi_heading;
+    position: relative;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    transition: background-color;
+    animation-direction: alternate;
+}
+
+@keyframes certi_heading{
+    from{
+        transition-duration: 1.4s;
+        transform: scale(1.03);
+        border: 3px solid rgb(19, 18, 18);
+        background-color: rgba(6, 99, 99, 0.625);
+    }
+    to{
+        background-color: rgb(9, 9, 9);
+        border: 3px solid rgb(233, 229, 229);
+    }
+}
+
+
+.certifications{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.certiheading{
+    font-size: 25px;
+    background-color: rgb(3, 52, 52);
+    border: 1px solid whitesmoke;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.certificationitem{
+    border: 3px solid beige;
+    background-color: rgb(28, 52, 72);
+    padding: 20px;
+    margin: 25px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all;
+}
+
+.certificationitem:hover{
+    box-shadow: 7px 7px 7px aliceblue, -7px -7px 7px aliceblue;
+    transition-duration: 1s;
+    transform: scale(1.03);
+    font-size:medium;
+}
+
+.certi{
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.certi:hover{
+    background-color: rgb(229, 225, 225);
+    color: rgb(212, 0, 0);
+}
+
+
+
+
+
+
+
+/*        REDMI NOTE 12 PRO, POCO, REAL ME, MOTO G POWER      */
+
+@media (width>362px) and (width<650px){
+
+    
+
+    .certifications{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: end;
+    }
+
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------SERVICES----------------------------------*/
+
+
+.services{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.serviceitem{
+    border: 3px solid beige;
+    background-color: rgb(28, 52, 72);
+    padding: 20px;
+    margin: 25px;
+    text-align: center;
+    border-radius: 20px;
+    transition: all;
+}
+
+.serviceitem:hover{
+    box-shadow: 7px 7px 7px aliceblue, -7px -7px 7px aliceblue;
+    transition-duration: 1s;
+    transform: scale(1.03);
+    font-size:medium;
+}
+
+
+
+
+/*---------------------PROJECTS-----------------------------------*/
+
+
+
+.projects{
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.projectitem{
+    margin: 25px;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.project_content{
+    position: relative;
+    display: none;
+}
+
+.projectitem:hover .project_content{
+    display: block;
+} 
+
+.project_image{
+    display: block;
+    position: relative;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.project_image:hover{
+    opacity: 0.7;
+}
+
+.projectitem:hover{
+    transition-duration: 1s;
+    transform: scale(1.03);
+    font-size:medium;
+    animation: porject;
+    position: relative;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes porject{
+    from{
+        border: 3px solid white;
+    }
+    to{
+        border: 3px solid black;   
+    }
+}
+
+
+.click{
+    background-color: black;
+    border-radius: 10px;
+}
+
+.click:hover{
+    color: aqua;
+}
+
+
+img{
+    margin-top: 12px;
+}
+
+
+
+
+/*---------------------CONTACT-----------------------------------*/
+
+
+/* ------------------- CONTAINER ----------------------------------------------- */
+
+/* --------------- FORM ------------------------------- */
+
+
+
+.contact{
+    text-align: center;
+} 
+
+
+input{
+    border-radius: 20px;
+    font-size: larger;
+    margin: 10px;
+    background-color: rgb(28, 52, 72);
+    padding: 20px;
+    color: aliceblue;
+    transition: all;
+}
+
+input:hover{
+    transition-duration: 1.5s;
+    transform: scale(1.07);
+}
+
+
+textarea{
+    border-radius: 20px;
+    font-size: larger;
+    background-color: rgb(28, 52, 72);
+    color: aliceblue;
+    text-align: center;
+    transition: all;
+}
+
+textarea:hover{
+    transition-duration: 1.5s;
+    transform: scale(1.03);
+}
+    
+
+
+button{
+    color: aliceblue;
+    background-color: black;
+    padding: 16px;
+    border-radius: 20px;
+    font-size: large;
+    margin: 16px;
+    transition-property: background-color;
+}
+
+button:hover{
+    color: rgb(18, 18, 190);
+    transition-duration: 0.5s;
+    transform: scale(1.07);
+    font-size: larger;
+    background-color: aliceblue;
+}
+
+button:active{
+    color: rgb(235, 8, 8);
+}
+
+/*            Samsung Galaxy S8 - Mobile View          */
+
+@media (width>0px) and (width<361px){
+    
+    textarea{
+        width: 250px;
+    }
+}
+
+
+
+/*        REDMI NOTE 12 PRO, POCO, REAL ME, MOTO G POWER      */
+
+@media (width>362px) and (width<650px){
+
+    textarea{
+        width: 250px;
+    }
+
+
+}
+
+
+
+
+/* ---------------------- FOOTER ---------------------- */
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    height: 90px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.footeritem{
+    border: 3px solid aqua;
+}
+
+.footeritem:hover{
+    border: 4px solid aqua;
+    transform: scale(1.2);
+}
+
+
+
+
+/*            Samsung Galaxy S8 - Mobile View          */
+
+@media (width>0px) and (width<361px){
+
+    footer{
+        height: 20vh;
+        margin-top: 75px;
+    }
+    
+
+}
+
+
+
+/*        REDMI NOTE 12 PRO, POCO, REAL ME, MOTO G POWER      */
+
+@media (width>362px) and (width<650px){
+
+    footer{
+        height: 40vh;
+        margin-top: 25px;
+    }
+    
+
+}
+
+
+
+/*            IPAD MINI - View          */
+
+
+@media (width=768px){
+    
+    footer{
+        height: 45vh;
+        margin-top: 25px;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
